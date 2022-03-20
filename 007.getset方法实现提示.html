@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src='https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.js'></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <br />
+        <button @click='des'>减少</button> {{num}}
+        <!-- <br /> -->
+        <!-- 增加事件 -->
+        <button @click='sub'>增加</button>
+        <br />
+        <div style='background-color:red;color:white;margin-top:20px ;' v-if='gs'>{{gs}}</div>
+    </div>
+    <script src="./渲染库/007.getset方法实现提示.js">
+    </script>
+</body>
+
+</html>

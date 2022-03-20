@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app'>
+        <div @click='add'>{{name}}</div>
+        <!-- 事件的动态计算 -->
+        <div @[event]='add'>铁子</div>
+        <!-- a标签超链接 -->
+        <a href="https://www.baidu.com" @click='stop'>{{name}}</a>
+
+        <br />
+        <!-- 阻止默认行为 -->
+        <a href="https://www.houdunren.com" @click.prevent='stop'>阻止我</a>
+        <br />
+        <!-- 传参 $event -->
+        <a href="https://www.qq.com" @click.prevent="go($event,'大仙')">干</a></a>
+        <br />
+
+        <!-- 减少事件 -->
+        <br />
+        <button @click='des'>减少</button> {{num}}
+        <!-- 增加事件 -->
+        <button @click='sub'>增加</button>
+        <br />
+
+        <!-- 抛出一个错误 -->
+        <!-- data本身为空 默认不显示 -->
+        <div style='background-color:red;color:white;width:110px' v-show='error'>提示:{{error}}</div>
+
+    </div>
+    <script src="./渲染库/006方法的使用细节.js">
+    </script>
+</body>
+
+</html>

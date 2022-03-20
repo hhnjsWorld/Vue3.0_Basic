@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 放在容器里 不能放在容器上 -->
+    <div id="app">
+        <!-- 第一种写法 -->
+        <!-- {{name}} -->
+        <!-- 第二种推荐写法 -->
+        <div v-text="name"></div>
+
+
+        <!-- v-html的呈现不推荐 -->
+        <!-- 单是html的话就是渲染标签 -->
+        <!-- <div>{{html}}</div> -->
+        <div v-html="html"></div>
+    </div>
+    <script src="./渲染库/004文本数据操作.js">
+    </script>
+</body>
+
+
+</html>

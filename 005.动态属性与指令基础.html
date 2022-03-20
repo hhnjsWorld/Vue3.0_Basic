@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 绑定数据 -->
+        <div v-bind:id="value">{{value}}</div>
+        <!-- 利用属性变化 -->
+        <div>
+            {{n==1?'胡海宁':'大哥大'}}
+        </div>
+        <!-- v-show true显示 false不显示 -->
+        <div v-show="false">{{name}}</div>
+        <!-- v-once 只渲染一次 不变 -->
+        <div v-once>{{name}}</div>
+        <div>{{name}}</div>
+        <!-- 利用属性替换id绑定属性 -->
+        <div :[arg]='value'>{{name}}</div>
+        <!-- 属性被替换的操作 -->
+
+        <a :[arg]='hr'>{{hr}}</a>
+    </div>
+    <script src="./渲染库/005动态属性与指令基础.js"></script>
+</body>
+
+</html>

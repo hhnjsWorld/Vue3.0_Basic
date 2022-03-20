@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src='https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.js'></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- 用computed做判断 -->
+
+        <!-- <br/> {{danger}} -->
+        <h2 v-text="danger"></h2>
+        <br/>
+        <!-- 减少事件 -->
+        <!-- 抛出一个错误 -->
+        <!-- data本身为空 默认不显示 -->
+        <div style='background-color:yellow;color:black;width:200px' v-show='error'>这里是ifelse提示:{{error}}</div>
+        <br />
+        <button @click='des'>减少</button> {{num}}
+        <!-- <br /> -->
+        <!-- 增加事件 -->
+        <button @click='sub'>增加</button>
+        <br />
+
+        <div style='background-color:red;color:white;width:110px;margin-top:20px ;' v-show='error'>提示:methods{{methodsNote()}}</div>
+        <div style='background-color:lightblue;color:white;width:140px;margin-top:20px ;' v-show='error'>提示:computed{{computedNote}}</div>
+        <br />
+    </div>
+
+    <script src="./渲染库/007.计算属性的使用.js"></script>
+</body>
+
+</html>
